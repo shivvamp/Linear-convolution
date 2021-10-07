@@ -14,14 +14,14 @@ int convolution(int x[],int h[],int x_s,int h_s)
 {
     int size=x_s+h_s -1;
     int y[size];
-    int i,j,k;
+    int i,j;
    printf("%d\n",size);
     for(i=0;i<size;i++)
     {
         y[i]=0;
         for(j=0;j<x_s;j++)
         {
-            if((i-j)>=0 && (i-j)<h_s)
+            if((i-j)>=0 && (i-j)<h_s)  // to check convoled parameter are within range//
             {
                 y[i]=y[i]+x[j]*h[i-j];
             }
